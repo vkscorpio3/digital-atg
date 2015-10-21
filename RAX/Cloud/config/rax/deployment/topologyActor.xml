@@ -21,7 +21,7 @@
   <!--  This chain is used to apply order payment to a default payment group. -->
   <actor-chain id="update" transaction="TX_SUPPORTS">
     <form id="updateTopologyFormHandler" name="/atg/epub/deployment/TopologyEditFormHandler"
-      var="updateTopologyFormHandler" handle="addAgent">
+      var="updateTopologyFormHandler" handle="addAgentByTarget">
       <input name="agentDisplayName" value="${param.agentDisplayName}" />
       <input name="description" value="${param.description}" />
       <input name="targetName" value="${param.targetName}" />

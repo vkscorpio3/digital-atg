@@ -42,48 +42,76 @@ import atg.deployment.server.ui.TopologyEditFormHandler;
 import atg.servlet.DynamoHttpServletRequest;
 import atg.servlet.DynamoHttpServletResponse;
 
+/**
+ * Formhandler provides method to add agent to surrogate via remote means
+ * 
+ * @author dev
+ * 
+ */
 public class UpdateTopologyFormHandler extends TopologyEditFormHandler {
+
+	// Target name to get the appropriate target ID to update
+
 	String mTargetName;
-	
+
 	public String getTargetName() {
 		return mTargetName;
 	}
+
 	public void setTargetName(String pTargetName) {
 		this.mTargetName = pTargetName;
 	}
 
+	/**
+	 * This method provides an alternate route to to facilitate topology update
+	 * outside of the BCC
+	 * 
+	 * It sets up required variables, before calling the handleAddAgent
+	 * 
+	 * @param pRequest
+	 * @param pResponse
+	 * @return
+	 * @throws DeploymentException
+	 * @throws IOException
+	 * @throws ServletException
+	 */
+	public boolean handleAddAgentByTarget(DynamoHttpServletRequest pRequest,
+			DynamoHttpServletResponse pResponse) throws DeploymentException,
+			IOException, ServletException {
 
-	public void preAddAgent (DynamoHttpServletRequest pRequest,DynamoHttpServletResponse pResponse)
-	 throws DeploymentException, IOException, ServletException{
-		vlogDebug("UpdateTopologyFormHandler: preAddAgent called");
-		setTargetID (findTarget (getTargetName()));
-		setAgentEssential (Boolean.FALSE);
-		String [] assetDestinations = {"/atg/epub/file/WWWFileSystem" , "/atg/epub/file/ConfigFileSystem"};
-		setIncludeAssetDestinations (assetDestinations);
-		super.preAddAgent(pRequest, pResponse);
+		vlogDebug("UpdateTopologyFormHandler: handleAddAgentViaRemote called");
+		setTargetID(findTarget(getTargetName()));
+		setAgentEssential(Boolean.FALSE);
+		String[] assetDestinations = { "/atg/epub/file/WWWFileSystem",
+				"/atg/epub/file/ConfigFileSystem" };
+		setIncludeAssetDestinations(assetDestinations);
+		return super.handleAddAgent(pRequest, pResponse);
 	}
-	
+
+	// Find targetID given target Name
 	@SuppressWarnings("unchecked")
 	private String findTarget(String targetName) throws DeploymentException {
 		if (StringUtils.isNotEmpty(targetName)) {
-			TopologyDef tDef = getDeploymentServer().getTopologyManager().getSurrogateTopology();
+			TopologyDef tDef = getDeploymentServer().getTopologyManager()
+					.getSurrogateTopology();
 			if (tDef != null) {
-				List <TargetDef> targets = tDef.getTargets();
+				List<TargetDef> targets = tDef.getTargets();
 				if (targets != null) {
-					Iterator <TargetDef>it = targets.iterator();
+					Iterator<TargetDef> it = targets.iterator();
 					TargetDef target = it.next();
 					String displayName = target.getDisplayName();
 					if (StringUtils.isNotEmpty(displayName)) {
-						if (displayName.trim().equalsIgnoreCase(getTargetName().trim())) {
+						if (displayName.trim().equalsIgnoreCase(
+								getTargetName().trim())) {
 							vlogDebug("Target to edit :" + target.getID());
 							return target.getID();
 						}
 					}
 				}
-				
+
 			}
 		}
 		return null;
 	}
-	
+
 }
