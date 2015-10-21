@@ -13,19 +13,21 @@
           var="topologyLookupParamStack">
           <oparam name="output">
             <output id="result" name="result"
-              value="${topologyLookupParamStack.result}" />
+              value="${topologyLookupParamStack.topology}" />
           </oparam>
         </droplet>
   </actor-chain>
   
   <!--  This chain is used to apply order payment to a default payment group. -->
   <actor-chain id="update" transaction="TX_SUPPORTS">
-    <form id="updateTopologyFormHandler" name="/rax/deployment/UpdateTopologyFormHandler"
-      var="updateTopologyFormHandler" handle="updateTopology">
-      <input name="agentName" value="${param.agentName}" />
+    <form id="updateTopologyFormHandler" name="/atg/epub/deployment/TopologyEditFormHandler"
+      var="updateTopologyFormHandler" handle="addAgent">
+      <input name="agentDisplayName" value="${param.agentDisplayName}" />
+      <input name="description" value="${param.description}" />
       <input name="targetName" value="${param.targetName}" />
-      <input name="uri" value="${param.uri}" />
-      <input name="errorURL" value="/model/rax/deployment/TopologyActor/update-error" />
+      <input name="transportType" value="RMI" />
+      <input name="transportURL" value="${param.transportURL}" />
+      <input name="failureURL" value="/model/rax/deployment/TopologyActor/update-error" />
       <input name="successURL" value="/model/rax/deployment/TopologyActor/update-success" />
     </form>
   </actor-chain>
@@ -39,5 +41,3 @@
   
   
 </actor-template>
-
-          
