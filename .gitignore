@@ -2,4 +2,4 @@ bin/
 build/
 logs/
 pagebuild/
-
+.DS_Store/
