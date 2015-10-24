@@ -33,7 +33,7 @@
     <p><dsp:input type="hidden" bean="TopologyEditFormHandler.successURL" value="updateTopology.jsp"/>
     <p><dsp:input type="hidden" bean="TopologyEditFormHandler.failureURL" value="updateTopology.jsp"/>
  	<p><p></p></p>
- 	<dsp:input type="submit" value="Update Topology" bean="TopologyEditFormHandler.addAgent"/>
+ 	<dsp:input type="submit" value="Update Topology" bean="TopologyEditFormHandler.addAgentByTarget"/>
    </dsp:form>
   </dsp:oparam>
 </dsp:droplet>

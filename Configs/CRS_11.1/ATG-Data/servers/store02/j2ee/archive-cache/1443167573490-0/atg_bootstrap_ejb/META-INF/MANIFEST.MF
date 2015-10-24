@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.0
+ATG-Module-Uri: atg_bootstrap_ejb.jar
+Class-Path: ./atglib/_atghome_slocallib/ ./atglib/_DafEar.base_s.._sTo
+ mcat_slib_sclasses.jar ./atglib/_DafEar.base_s.._sWebLogic_slib_sclas
+ ses.jar ./atglib/_DafEar.base_s.._sWebSphere_slib_sclasses.jar ./atgl
+ ib/_DafEar.base_s.._sJBoss_slib_sclasses.jar ./atglib/_DafEar.base_sl
+ ib_sclasses.jar ./atglib/_Store.Mobile_slib_sclasses.jar ./atglib/_St
+ ore.Storefront_slib_sclasses.jar ./atglib/_Store.Endeca.Assembler_sli
+ b_sclasses.jar ./atglib/_Store.Endeca.International.Index_slib_sclass
+ es.jar ./atglib/_Store.Endeca.Index_slib_sclasses.jar ./atglib/_Store
+ .EStore.International_slib_sclasses.jar ./atglib/_Store.EStore_slib_s
+ classes.jar ./atglib/_Store.EStore_slib_scommons-codec-1.3.jar ./atgl
+ ib/_DCS.PublishingAgent_slib_sclasses.jar ./atglib/_DCS_slib_sresourc
+ es.jar ./atglib/_DCS_slib_sclasses.jar ./atglib/_ContentMgmt_slib_scl
+ asses.jar ./atglib/_WebUI_slib_sclasses.jar ./atglib/_PublishingAgent
+ .base_slib_sagent.jar ./atglib/_PublishingAgent.base_slib_sclasses.ja
+ r ./atglib/_REST_slib_satg-rest-1.0.jar ./atglib/_REST_slib_sorg.json
+ .jar ./atglib/_REST_slib_sdom4j-1.6.1.jar ./atglib/_REST_slib_scommon
+ s-io-1.4.jar ./atglib/_REST_slib_scommons-fileupload-1.2.1.jar ./atgl
+ ib/_REST_slib_slog4j-1.2.15.jar ./atglib/_DSS_slib_sresources.jar ./a
+ tglib/_DSS_slib_sclasses.jar ./atglib/_DPS_slib_sresources.jar ./atgl
+ ib/_DPS_slib_sclasses.jar ./atglib/_DAF.Endeca.Index_s.._s.._s.._sDAF
+ _sSearch_scommon_slib_sclasses.jar ./atglib/_DAF.Endeca.Index_slib_sc
+ lasses.jar ./atglib/_DAF.Search.Index_slib_sclasses.jar ./atglib/_DAF
+ .Search.Base_slib_sclasses.jar ./atglib/_DAF.Search.Base_slib_srmi-st
+ ub-classes.jar ./atglib/_DAF.TextSearch.Index_slib_sclasses.jar ./atg
+ lib/_DAF.TextSearch.Base_slib_sclasses.jar ./atglib/_DAS-UI_slib_suir
+ esources.jar ./atglib/_DAS-UI_slib_suiclasses.jar ./atglib/_DAS-UI_sl
+ ib_sjhall.jar ./atglib/_DAF.Endeca.Assembler_slib_sclasses.jar ./atgl
+ ib/_DAF.Endeca.Assembler_slib_sendeca__navigation-6.5.1.jar ./atglib/
+ _DAF.Endeca.Assembler_slib_sendeca__assembler__core-11.1.0.jar ./atgl
+ ib/_DAF.Endeca.Assembler_slib_sendeca__assembler__navigation-11.1.0.j
+ ar ./atglib/_DAF.Endeca.Base_slib_sclasses.jar ./atglib/_DAS_slib_sre
+ sources.jar ./atglib/_DAS_slib_sclasses.jar ./atglib/_DAS_slib_sice.j
+ ar ./atglib/_DAS_slib_scglib-nodep-2.1__3.jar ./atglib/_DAS_slib_sspr
+ ing-aop-1.2-rc1.jar ./atglib/_DAS_slib_sjline-0.9.94.jar ./atglib/_DA
+ S_slib_svalidation-api-1.0.0.GA.jar
+ATG-Module-Version: atg-bootstrap-ejb.jar
+ATG-Use-Dynamo-Class-Path: true
+Created-By: 23.21-b01 (Oracle Corporation)
+ATG-Bootstrap-Module: true
+
